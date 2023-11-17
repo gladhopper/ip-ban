@@ -4,12 +4,18 @@
 <style>
 body {
  font-family: Arial, sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ margin: 0;
+ padding: 0;
+ background-color: #f2f2f2;
 }
 .container {
  width: 80%;
- margin: auto;
  padding: 20px;
- background-color: #f2f2f2;
+ background-color: #fff;
  border: 1px solid #ddd;
  border-radius: 5px;
 }
@@ -40,17 +46,19 @@ function getIPAddress() {
 <body onload="getIPAddress()">
 
 <div class="container">
- <h1>Permanently Banned IP address</h1>
+ <h1>Temporarily Banned IP address</h1>
  <p>Your IP address <span id="ipAddressText"></span> has been banned on the following services:</p>
  <ul>
-    <li>Gladihoppers</li>
+    <li>E-mail</li>
  </ul>
- <p>You have been banned for:</p>
+ <p>The most common causes for these bans are:</p>
  <ul>
-    <li>Leaking private-accessed website</li>
+   <li>Leaking private-accessed website</li>
     <li>Observing others' private screen surreptitiously</li>
     <li>Website exploitation</li>
  </ul>
  <p>Your IP address is permanently banned and cannot be unlocked. It is recommended that you contact the owner. He will be able to give you more information and help you prevent it from happening again.</p>
 </div>
+
 </body>
+</html>
