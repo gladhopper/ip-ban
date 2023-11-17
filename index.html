@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+ font-family: Arial, sans-serif;
+}
+.container {
+ width: 80%;
+ margin: auto;
+ padding: 20px;
+ background-color: #f2f2f2;
+ border: 1px solid #ddd;
+ border-radius: 5px;
+}
+h1 {
+ font-size: 24px;
+ color: #666;
+}
+p {
+ font-size: 16px;
+ color: #333;
+}
+</style>
+<script>
+function getIPAddress() {
+ fetch('https://api.ipify.org?format=json')
+ .then(response => response.json())
+ .then(data => {
+   const ipAddress = data.ip;
+   const ipAddressText = document.getElementById('ipAddressText');
+   ipAddressText.innerHTML = ipAddress;
+ })
+ .catch((error) => {
+   console.error('Error:', error);
+ });
+}
+</script>
+</head>
+<body onload="getIPAddress()">
+
+<div class="container">
+ <h1>Permanently Banned IP address</h1>
+ <p>Your IP address <span id="ipAddressText"></span> has been banned on the following services:</p>
+ <ul>
+    <li>Gladihoppers</li>
+ </ul>
+ <p>You have been banned for:</p>
+ <ul>
+    <li>Leaking private-accessed website</li>
+    <li>Observing others' private screen surreptitiously</li>
+    <li>Website exploitation</li>
+ </ul>
+ <p>Your IP address is permanently banned and cannot be unlocked. It is recommended that you contact the owner. He will be able to give you more information and help you prevent it from happening again.</p>
+</div>
+</body>
